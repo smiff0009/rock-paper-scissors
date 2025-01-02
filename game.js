@@ -14,11 +14,13 @@ let humanChoice = prompt("Choose rock, paper, or scissors");
 
 
 function getHumanChoice() {
-    if(humanChoice.toLowerCase() === "rock" || "paper" || "scissors") {
+    if(humanChoice.toLowerCase() === "rock" 
+    || humanChoice.toLowerCase() "paper" 
+    || humanChoice.toLowerCase() "scissors") {
         return humanChoice.toLowerCase;
     }
     else {
-        alert("not a valid choice!")
+        alert("not a valid choice!");
     }
 }
 
