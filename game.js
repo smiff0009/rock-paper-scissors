@@ -28,18 +28,18 @@ function getHumanChoice() {
 }
 
 console.log("---");
-getHumanChoice();
+let lowerHumanChoice = getHumanChoice();
 console.log(`Your choice is ${humanChoice.toLowerCase()}`);
 console.log("---");
 
-function playRound(humanChoice, computerChoice) {
-    switch(humanChoice) {
+function playRound(lowerHumanChoice, computerChoice) {
+    switch(lowerHumanChoice) {
         case "rock": {
-            if(computerChoice.toLowerCase() == "paper") {
+            if(computerChoice == "paper") {
                 console.log("Computer wins! Paper beats rock!");
                 computerScore++;
             }
-            else if(computerChoice.toLowerCase() == "scissors") {
+            else if(computerChoice == "scissors") {
                 console.log("You win! Rock beats scissors!");
                 humanScore++;
             }
@@ -49,11 +49,11 @@ function playRound(humanChoice, computerChoice) {
         }
         break;
         case "paper": {
-            if(computerChoice.toLowerCase() == "rock") {
+            if(computerChoice == "rock") {
                 console.log("You win! Paper beats rock!");
                 humanScore++;
             }
-            else if(computerChoice.toLowerCase() == "scissors") {
+            else if(computerChoice == "scissors") {
                 console.log("Computer wins! Scissors beats paper!");
                 computerScore++;
             }
@@ -63,11 +63,11 @@ function playRound(humanChoice, computerChoice) {
         }
         break;
         case "scissors": {
-            if(computerChoice.toLowerCase() == "rock") {
+            if(computerChoice == "rock") {
                 console.log("Computer wins! Rock beats scissors!");
                 computerScore++;
             }
-            else if(computerChoice.toLowerCase() == "paper") {
+            else if(computerChoice == "paper") {
                 console.log("You win! Scissors beats paper!");
                 humanScore++;
             }
@@ -79,7 +79,7 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-playRound(humanChoice, computerChoice);
+playRound(lowerHumanChoice, computerChoice);
 
 console.log(humanScore);
 console.log(computerScore);
