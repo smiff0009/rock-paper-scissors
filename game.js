@@ -3,9 +3,10 @@ let computerScore = 0;
 
 const options = ["rock", "paper", "scissors"];
 
-function getComputerChoice() {
-    let computerChoice = 
+let computerChoice = 
     options[Math.floor((Math.random() * options.length))];
+
+function getComputerChoice() {
     return computerChoice;
 } 
 
