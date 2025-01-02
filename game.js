@@ -85,3 +85,22 @@ playRound(humanChoice, computerChoice);
 
 console.log(humanScore);
 console.log(computerScore);
+
+function game() {
+    for(let i=0, i<5, i++) {
+        playRound(humanChoice, computerChoice);
+        console.log(`Computer score is ${computerScore}
+            and your score is ${humanScore}`);
+    }
+    if(i == 4 && humanScore > computerScore) {
+        console.log("Congratulations! You won!");
+    }
+    else if(i == 4 && computerScore > humanScore) {
+        console.log("Sorry, the computer beat you!");
+    }
+    else {
+        console.log("It's a tie!");
+    }
+}
+
+game();
