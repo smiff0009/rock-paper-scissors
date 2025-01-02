@@ -87,7 +87,7 @@ console.log(humanScore);
 console.log(computerScore);
 
 function game() {
-    for(let i=0, i<5, i++) {
+    for(let i=0; i<5; i++) {
         playRound(humanChoice, computerChoice);
         console.log(`Computer score is ${computerScore}
             and your score is ${humanScore}`);
