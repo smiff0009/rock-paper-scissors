@@ -13,7 +13,10 @@ function getComputerChoice() {
 getComputerChoice();
 console.log(computerChoice);
 
-let humanChoice = prompt("Choose rock, paper, or scissors");
+let unvalidatedHumanChoice = 
+prompt("Choose rock, paper, or scissors");
+
+let humanChoice = unvalidatedHumanChoice.toLowerCase();
 
 
 function getHumanChoice() {
@@ -28,12 +31,11 @@ function getHumanChoice() {
 }
 
 console.log("---");
-let lowerHumanChoice = getHumanChoice();
 console.log(`Your choice is ${humanChoice.toLowerCase()}`);
 console.log("---");
 
-function playRound(lowerHumanChoice, computerChoice) {
-    switch(lowerHumanChoice) {
+function playRound(humanChoice, computerChoice) {
+    switch(humanChoice) {
         case "rock": {
             if(computerChoice == "paper") {
                 console.log("Computer wins! Paper beats rock!");
@@ -79,7 +81,7 @@ function playRound(lowerHumanChoice, computerChoice) {
     }
 }
 
-playRound(lowerHumanChoice, computerChoice);
+playRound(humanChoice, computerChoice);
 
 console.log(humanScore);
 console.log(computerScore);
