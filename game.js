@@ -10,11 +10,11 @@ function getComputerChoice() {
 
 console.log(getComputerChoice());
 
+let humanChoice = prompt("Choose rock, paper, or scissors");
+
 function getHumanChoice() {
-    let humanInput = prompt("Choose rock, paper, or scissors");
-    if(humanInput.toLowerCase() === "rock" || "paper" || "scissors") {
-        let humanChoice = humanInput.toLowerCase();
-        return humanChoice;
+    if(humanChoice.toLowerCase() === "rock" || "paper" || "scissors") {
+        return humanChoice.toLowerCase;
     }
     else {
         alert("not a valid choice!")
