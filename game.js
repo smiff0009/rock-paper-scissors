@@ -4,7 +4,7 @@ let computerScore = 0;
 const options = ["rock", "paper", "scissors"];
 
 function getComputerChoice() {
-    let computerChoice = options[Math.floor(Math.random * options.length)];
+    let computerChoice = options[Math.floor(Math.random * 3)];
     return computerChoice;
 } 
 
@@ -23,4 +23,4 @@ function getHumanChoice() {
 
 console.log("---");
 getHumanChoice();
-console.log(`Your choice is ${humanChoice}`);
+console.log(`Your choice is ${humanChoice.toLowerCase}`);
