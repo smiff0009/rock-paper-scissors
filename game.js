@@ -22,6 +22,9 @@ prompt("Choose rock, paper, or scissors");
 let humanChoice = unvalidatedHumanChoice.toLowerCase();
 */
 
+let humanSelection = getHumanChoice();
+let computerSelection = getComputerChoice();
+
 function getHumanChoice() {
     let unvalidatedHumanChoice = 
     prompt("Choose rock, paper, or scissors");
@@ -30,7 +33,6 @@ function getHumanChoice() {
     || humanChoice.toLowerCase() === "paper" 
     || humanChoice.toLowerCase() === "scissors") {
         return humanChoice.toLowerCase;
-        return humanChoice;
     }
     else {
         alert("not a valid choice!");
@@ -38,14 +40,14 @@ function getHumanChoice() {
 }
 
 
-function playRound(humanChoice, computerChoice) {
-    switch(humanChoice) {
+function playRound(humanSelection, computerSelection) {
+    switch(humanSelection) {
         case "rock": {
-            if(computerChoice == "paper") {
+            if(computerSelection == "paper") {
                 console.log("Computer wins! Paper beats rock!");
                 computerScore++;
             }
-            else if(computerChoice == "scissors") {
+            else if(computerSelection == "scissors") {
                 console.log("You win! Rock beats scissors!");
                 humanScore++;
             }
@@ -55,11 +57,11 @@ function playRound(humanChoice, computerChoice) {
         }
         break;
         case "paper": {
-            if(computerChoice == "rock") {
+            if(computerSelection == "rock") {
                 console.log("You win! Paper beats rock!");
                 humanScore++;
             }
-            else if(computerChoice == "scissors") {
+            else if(computerSelection == "scissors") {
                 console.log("Computer wins! Scissors beats paper!");
                 computerScore++;
             }
@@ -69,11 +71,11 @@ function playRound(humanChoice, computerChoice) {
         }
         break;
         case "scissors": {
-            if(computerChoice == "rock") {
+            if(computerSelection == "rock") {
                 console.log("Computer wins! Rock beats scissors!");
                 computerScore++;
             }
-            else if(computerChoice == "paper") {
+            else if(computerSelection == "paper") {
                 console.log("You win! Scissors beats paper!");
                 humanScore++;
             }
@@ -90,7 +92,7 @@ function game() {
     for(let i=0; i<5; i++) {
         getComputerChoice();
         getHumanChoice();
-        playRound(humanChoice, computerChoice);
+        playRound(humanSelection, computerSelection);
         console.log(`Computer score is ${computerScore}
             and your score is ${humanScore}`);
     }
