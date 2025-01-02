@@ -2,24 +2,30 @@ let humanScore = 0;
 let computerScore = 0;
 
 const options = ["rock", "paper", "scissors"];
-
+/*
 let computerChoice = 
     options[Math.floor((Math.random() * options.length))];
-
+*/
 function getComputerChoice() {
+    let computerChoice = 
+    options[Math.floor((Math.random() * options.length))];
     return computerChoice;
 } 
 
 getComputerChoice();
 console.log(computerChoice);
 
+/*
 let unvalidatedHumanChoice = 
 prompt("Choose rock, paper, or scissors");
 
 let humanChoice = unvalidatedHumanChoice.toLowerCase();
-
+*/
 
 function getHumanChoice() {
+    let unvalidatedHumanChoice = 
+    prompt("Choose rock, paper, or scissors");
+    let humanChoice = unvalidatedHumanChoice.toLowerCase();
     if(humanChoice.toLowerCase() === "rock" 
     || humanChoice.toLowerCase() === "paper" 
     || humanChoice.toLowerCase() === "scissors") {
