@@ -95,7 +95,6 @@ function game() {
         playRound(humanSelection, computerSelection);
         console.log(`Computer score is ${computerScore}
             and your score is ${humanScore}`);
-    }
     if(i == 4 && humanScore > computerScore) {
         console.log("Congratulations! You won!");
         console.log(`Computer Score: ${computerScore}`);
@@ -111,6 +110,7 @@ function game() {
         console.log(`Computer Score: ${computerScore}`);
         console.log(`Your Score: ${humanScore}`);
     }
+}
 }
 
 game();
