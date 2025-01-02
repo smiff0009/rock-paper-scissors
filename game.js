@@ -30,6 +30,7 @@ function getHumanChoice() {
     || humanChoice.toLowerCase() === "paper" 
     || humanChoice.toLowerCase() === "scissors") {
         return humanChoice.toLowerCase;
+        return humanChoice;
     }
     else {
         alert("not a valid choice!");
