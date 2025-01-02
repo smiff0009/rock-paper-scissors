@@ -11,10 +11,10 @@ function getComputerChoice() {
     options[Math.floor((Math.random() * options.length))];
     return computerChoice;
 } 
-
+/*
 getComputerChoice();
 console.log(computerChoice);
-
+*/
 /*
 let unvalidatedHumanChoice = 
 prompt("Choose rock, paper, or scissors");
