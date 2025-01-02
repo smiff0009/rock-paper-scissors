@@ -8,7 +8,6 @@ function getComputerChoice() {
     return computerChoice;
 } 
 
-console.log(options[0]);
 console.log(getComputerChoice());
 
 function getHumanChoice() {
@@ -23,5 +22,5 @@ function getHumanChoice() {
 }
 
 console.log("---");
-
+getHumanChoice();
 console.log(`Your choice is ${humanChoice}`);
