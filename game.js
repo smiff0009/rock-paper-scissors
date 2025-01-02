@@ -30,9 +30,6 @@ function getHumanChoice() {
     }
 }
 
-console.log("---");
-console.log(`Your choice is ${humanChoice.toLowerCase()}`);
-console.log("---");
 
 function playRound(humanChoice, computerChoice) {
     switch(humanChoice) {
@@ -81,25 +78,29 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-playRound(humanChoice, computerChoice);
-
-console.log(humanScore);
-console.log(computerScore);
 
 function game() {
     for(let i=0; i<5; i++) {
+        getComputerChoice();
+        getHumanChoice();
         playRound(humanChoice, computerChoice);
         console.log(`Computer score is ${computerScore}
             and your score is ${humanScore}`);
     }
     if(i == 4 && humanScore > computerScore) {
         console.log("Congratulations! You won!");
+        console.log(`Computer Score: ${computerScore}`);
+        console.log(`Your Score: ${humanScore}`);
     }
     else if(i == 4 && computerScore > humanScore) {
         console.log("Sorry, the computer beat you!");
+        console.log(`Computer Score: ${computerScore}`);
+        console.log(`Your Score: ${humanScore}`);
     }
     else {
         console.log("It's a tie!");
+        console.log(`Computer Score: ${computerScore}`);
+        console.log(`Your Score: ${humanScore}`);
     }
 }
 
