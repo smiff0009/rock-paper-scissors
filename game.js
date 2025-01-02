@@ -2,15 +2,16 @@ let humanScore = 0;
 let computerScore = 0;
 
 const options = ["rock", "paper", "scissors"];
+let computerChoice = options[Math.floor(Math.random * 3)];
 
 function getComputerChoice() {
-    let computerChoice = options[Math.floor(Math.random * 3)];
     return computerChoice;
 } 
 
-console.log(getComputerChoice());
+console.log(computerChoice);
 
 let humanChoice = prompt("Choose rock, paper, or scissors");
+
 
 function getHumanChoice() {
     if(humanChoice.toLowerCase() === "rock" || "paper" || "scissors") {
@@ -23,4 +24,4 @@ function getHumanChoice() {
 
 console.log("---");
 getHumanChoice();
-console.log(`Your choice is ${humanChoice.toLowerCase}`);
+console.log(`Your choice is ${humanChoice.toLowerCase()}`);
