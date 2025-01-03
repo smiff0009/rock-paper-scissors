@@ -92,3 +92,5 @@ function playGame() {
             Your Score: ${humanScore}`);
     }
 }
+
+playGame();
