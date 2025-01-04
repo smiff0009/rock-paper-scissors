@@ -79,7 +79,6 @@ function playRound(humanChoice, computerChoice) {
         humanScore++;
     }
     else {
-        console.log("It's a tie2!");
     }
 }
 
@@ -91,6 +90,17 @@ function playGame() {
         playRound(humanChoice, computerChoice);
         console.log(`Computer Score: ${computerScore}
             Your Score: ${humanScore}`);
+    }
+    if(computerScore > humanScore) {
+        console.log(`Computer wins the game 
+            ${computerScore} to ${humanScore}!`);
+    }
+    else if(humanScore > computerScore) {
+        console.log(`You win the game 
+            ${humanScore} to ${computerScore}!`);
+    }
+    else {
+        console.log("The game was a tie!");
     }
 }
 
