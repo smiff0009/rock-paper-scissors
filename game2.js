@@ -19,10 +19,10 @@ function getHumanChoice() {
         alert("Not a valid choice!");
     }  
 }
-
+/*
 let humanChoice = getHumanChoice();
 let computerChoice = getComputerChoice();
-
+*/
 function checkWinner(humanChoice, computerChoice) {
     switch(humanChoice) {
         case "rock":
