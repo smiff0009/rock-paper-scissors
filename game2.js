@@ -85,14 +85,12 @@ function playRound() {
 
 function playGame() {
     console.log("Welcome");
-    console.log(`Computer Score: ${computerScore}
-                 Your Score: ${humanScore}`);
-    for (let i = 0; i<5; i++) { 
+    for (let i = 0; i<5; i++) {
+        let humanChoice = getHumanChoice();
+        let computerChoice = getComputerChoice();
         playRound();
         console.log(`Computer Score: ${computerScore}
             Your Score: ${humanScore}`);
-        getComputerChoice();
-        getHumanChoice();
     }
 }
 
