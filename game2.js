@@ -86,14 +86,12 @@ function playGame() {
     console.log("Welcome");
     console.log(`Computer Score: ${computerScore}
                  Your Score: ${humanScore}`);
-    for (let i = 0; i<5; i++) {
-        let computerChoice = 0;
-        let humanChoice = 0;
-        getComputerChoice();
-        getHumanChoice();
+    for (let i = 0; i<5; i++) { 
         playRound();
         console.log(`Computer Score: ${computerScore}
             Your Score: ${humanScore}`);
+        getComputerChoice();
+        getHumanChoice();
     }
 }
 
