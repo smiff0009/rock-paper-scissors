@@ -17,7 +17,7 @@ function getHumanChoice() {
         }
     else {
         alert("Not a valid choice!");
-    }    
+    }  
 }
 
 let humanChoice = getHumanChoice();
@@ -87,6 +87,8 @@ function playGame() {
     console.log(`Computer Score: ${computerScore}
                  Your Score: ${humanScore}`);
     for (let i = 0; i<5; i++) {
+        getComputerChoice();
+        getHumanChoice();
         playRound();
         console.log(`Computer Score: ${computerScore}
             Your Score: ${humanScore}`);
