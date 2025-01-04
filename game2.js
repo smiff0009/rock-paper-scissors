@@ -71,14 +71,15 @@ let computerScore = 0;
 let humanScore = 0;
 
 function playRound() {
-    if(checkWinner(humanChoice, computerChoice) == "Computer") {
+    let result = checkWinner;
+    if(result == "Computer") {
         computerScore++;
     }
-    else if(checkWinner(humanChoice, computerChoice) == "Human") {
+    else if(result == "Human") {
         humanScore++;
     }
     else {
-
+        console.log("It's a tie2!");
     }
 }
 
