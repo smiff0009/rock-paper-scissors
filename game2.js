@@ -71,7 +71,7 @@ let computerScore = 0;
 let humanScore = 0;
 
 function playRound() {
-    let result = checkWinner();
+    let result = checkWinner(humanChoice, computerChoice);
     if(result == "Computer") {
         computerScore++;
     }
