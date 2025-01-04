@@ -91,6 +91,10 @@ function playGame() {
         console.log(`Computer Score: ${computerScore}
             Your Score: ${humanScore}`);
     }
+    console.log(recapGame());
+}
+
+function recapGame() {
     if(computerScore > humanScore) {
         console.log(`Computer wins the game 
             ${computerScore} to ${humanScore}!`);
@@ -103,5 +107,4 @@ function playGame() {
         console.log("The game was a tie!");
     }
 }
-
 playGame();
