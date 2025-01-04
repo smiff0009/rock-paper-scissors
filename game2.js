@@ -58,7 +58,7 @@ function checkWinner(humanChoice, computerChoice) {
             }
             else if(computerChoice == "paper") {
                 console.log("You win! Scissors beats paper!");
-                return "Computer";
+                return "Human";
             }
             else {
                 console.log("It's a tie!");
